@@ -157,7 +157,7 @@ Function Start-Failback
   {
     Set-AzureRmContext -SubscriptionId $SubscriptionID
     $TagValue = $env:FWUDRTAG
-    $Res = Find-AzureRmResource -TagName nva_ha_udr -TagValue $TagValue
+    $Res = Get-AzureRmResource -TagName nva_ha_udr -TagValue $TagValue
 
     foreach ($RTable in $Res)
     {
